@@ -4,7 +4,7 @@
 
 using namespace std;
 
-/* BENNABI MOHAMED MALEK       Groupe 02              181832067172  */
+/* BENNABI MALEK       Groupe 02              181832067172  */
 
 
 struct Heure{
@@ -32,7 +32,7 @@ struct Vol{
 
 int nb(){
     int nbLignes = 0;
-    ifstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/tiyara.txt");
+    ifstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/avion.txt");
     string ligne;
     while(getline(malek, ligne)){
         nbLignes++; }
@@ -46,7 +46,7 @@ int nb(){
 void Ajout(string vd, string va, Heure hd, Heure ha, Date d){
 	
 		
-    string const nomFichier("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/tiyara.txt");
+    string const nomFichier("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/avion.txt");
     ofstream malek(nomFichier.c_str(),ios::app);
 
     if(malek){
@@ -77,7 +77,7 @@ void Lecture(){
 	cout<<"comment voulez vous afficher les vols? "<<endl;
 	cout<<"Tout les vols --> 0"<<endl<<"un nombre precis de vols --> 1"<<endl;cin>>r;cout<<endl<<endl;
 	if(r==0){
-	  ifstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/tiyara.txt");
+	  ifstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/avion.txt");
 
    if(malek){
 
@@ -100,7 +100,7 @@ else if(r==1){
 	  int i=1;
 	  string ligne;
 	  
-	  ifstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/tiyara.txt");
+	  ifstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/avion.txt");
 	  
 	  while ( getline(malek, ligne) && i <= (r1*10) ) {
       
@@ -113,9 +113,9 @@ else if(r==1){
 
 void detruire(){
 	
-	ofstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/tiyara.txt");
+	ofstream malek("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/avion.txt");
 	 
-	 remove("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/tiyara.txt");
+	 remove("C:/Users/HP/OneDrive/Desktop/L2 INFORMATIQUE/avion.txt");
     
         cout<<"Fichier Vide avec Succes! "<<endl<<endl;
 
